@@ -1,4 +1,4 @@
-# Conway's Game of Life
+# Conway's Game of Life copied from: https://automatetheboringstuff.com/2e/chapter4/
 import random, time, copy
 WIDTH = 60
 HEIGHT = 20

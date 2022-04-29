@@ -1,3 +1,4 @@
+# copied from: https://automatetheboringstuff.com/2e/chapter4/
 import random
 
 messages = ['It is certain',
