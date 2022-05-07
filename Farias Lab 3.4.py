@@ -65,6 +65,7 @@ def validateFile(fileName):
                 for item in row:
                     if item:
                         pieces.append(item)
+            file.close()
 
         pawns = filterBy('p', pieces)
         rocks = filterBy('r', pieces)
@@ -127,7 +128,7 @@ def main():
     if acceptRules():
         printChessBoard(chessBoard)
 
-        files = ["/chess_board.csv", "/chess_board_invalid.csv"]
+        files = ["./chess_board.csv", "./chess_board_invalid.csv"]
         for file in files:
             print('Starting validation for file=', file)
             items = validateFile(file)
