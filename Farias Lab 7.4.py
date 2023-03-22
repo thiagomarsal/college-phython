@@ -13,10 +13,12 @@ def askForPath(text):
 
 
 def main():
-    imagePath = askForPath('Please, inform the absolute path for your image: ')
+    imagePath = './zophie.jpg'
+    # imagePath = askForPath('Please, inform the absolute path for your image: ')
     subprocess.Popen(['C:\\Windows\\System32\\mspaint.exe', imagePath], bufsize=0)
 
-    audioPath = askForPath('Please, inform the absolute path for your audio: ')
+    audioPath = './Scots Wha Hae.mp3'
+    # audioPath = askForPath('Please, inform the absolute path for your audio: ')
     subprocess.Popen(['C:\\Program Files (x86)\\VideoLAN\\\VLC\\vlc.exe', audioPath], bufsize=0)
 
 main()
