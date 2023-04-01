@@ -11,6 +11,7 @@ def executeCmd(username, password):
         child.send("vagrant\r")
         child.expect(".+\$ ")
         child.send("chmod 600 /home/vagrant/.ssh/authorized_keys\r")
+	child.send("cat /home/vagrant/.ssh/authorized_keys\r")
         child.expect(".+\$ ")
         child.send("echo 'ssh-rsa AAAAB3Nza...1b4' >> /home/vagrant/.ssh/authorized_keys\r")
         child.send("echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCmFKLjhFnfAJ7KzPEhSwA4gZo9BuEinKS2XrXIBWZmsm/1Q8TOc5pLiTUuRE1dOPap3EIpjHX1FrbreoktCl7IRNvmoAOC1E/06Ad2Va5pW5TqjBf5eaS9LIEA703Y5OUOt4zK5gdHtjBR3h8GIgM7/5wPUygdjz1Eedu3vB1TeqdmxOtbNMCqjLGoXRAOTwr98R7ZMG69g5oPFlSUHVOZ562vPncn059O73JMsIgi8zsEpgHKoxEnp9R4VMcj8jDIunGFaH5JItmmiqF2HhPMo3KlomooZziQoNHYctbxwpX1flQHmqeQliC9Ot+NotJwMAZgXRVYkDYL+2TswJkd' >> /home/vagrant/.ssh/authorized_keys\r")
